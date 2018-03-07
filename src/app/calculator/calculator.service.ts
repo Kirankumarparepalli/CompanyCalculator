@@ -21,6 +21,7 @@ export class CalculatorService {
     * We can even have http service rest service calls to fetch for complex requirements.
     */
     var result;
+    try{
          if(operator == '+') {
             result = i + j;
           } else if(operator == '-') {
@@ -29,7 +30,13 @@ export class CalculatorService {
             result = i * j;
           } else if(operator == '/'){
             result = i / j;
+          }else{
+            result = 'Invalid operation';
           }
+    }catch(e){
+      console.log('Error caught in calculate function '+e);
+      result = 'Failed';
+    }
     return result;
     }
 }
