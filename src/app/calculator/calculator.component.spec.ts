@@ -99,5 +99,39 @@ describe('CalculatorComponent', () => {
     button.click();
     expect(component.result).toEqual(-30);
   }));
+  
+  /*Failures cases*/
+    it('should fail if the first input is not a number', async(() => {
+    const fixture = TestBed.createComponent(CalculatorComponent);
+    const component = fixture.debugElement.componentInstance;
+    component.firstInputNumber = 'a';
+    component.secondInputNumber = 11;
+    component.operation = '/';
+    let button = fixture.debugElement.nativeElement.querySelector('#populateResults');
+    button.click();
+    expect(component.result).toEqual('Failed');
+  }));
+  
+   it('should fail if the second input is not a number', async(() => {
+    const fixture = TestBed.createComponent(CalculatorComponent);
+    const component = fixture.debugElement.componentInstance;
+    component.firstInputNumber = 22;
+    component.secondInputNumber = 'b';
+    component.operation = '/';
+    let button = fixture.debugElement.nativeElement.querySelector('#populateResults');
+    button.click();
+    expect(component.result).toEqual('Failed');
+  }));
+  
+   it('should fail if the operation is not among +-*/', async(() => {
+    const fixture = TestBed.createComponent(CalculatorComponent);
+    const component = fixture.debugElement.componentInstance;
+    component.firstInputNumber = 22;
+    component.secondInputNumber = 'b';
+    component.operation = '/';
+    let button = fixture.debugElement.nativeElement.querySelector('#populateResults');
+    button.click();
+    expect(component.result).toEqual('Invalid operation');
+  }));
 
 });
