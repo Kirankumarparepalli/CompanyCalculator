@@ -32,15 +32,21 @@ export class CalculatorComponent {
     This function will call the service and populate the value in the result value
   */
   populateResults() {
+    var calculatedResult;
+    try{
       var firstValue = Number(this.firstInputNumber);
       var secondValue = Number(this.secondInputNumber);
       var operatorValue = this.operation;
 
       /*calling service*/
-      var total = this.calculatorService.calculate(firstValue, secondValue, operatorValue);
+      calculatedResult = this.calculatorService.calculate(firstValue, secondValue, operatorValue);
+    }catch(e){
+      console.log('Error caught in populateResults function '+e);
+      calculatedResult = 'Failed';
+    }
 
     /* Setting it to result model variable to bind the result to UI */
-      this.result = total;
+      this.result = calculatedResult;
   }
 
   /*
