@@ -7,11 +7,16 @@ import { CalculatorService } from './calculator.service';
   styleUrls: ['./calculator.component.css'],
   providers: [CalculatorService]
 })
+
 export class CalculatorComponent {
   firstInputNumber: any;
   secondInputNumber: any;
   result: any;
   operation: any;
+
+  /**
+  * @constructor: CalculatorService is getting injected
+  */
   constructor(private calculatorService: CalculatorService) {
     this.initializeValues();
   }
@@ -38,6 +43,9 @@ export class CalculatorComponent {
       this.result = total;
   }
 
+  /*
+    This function will retain the state of the class level variables to their original state.
+  */
   clearResults(){
     this.initializeValues();
   }
