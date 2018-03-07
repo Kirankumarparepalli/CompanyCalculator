@@ -1,5 +1,7 @@
+$primary-color: #563d7c;
+
 .container-fluid {
-	background: #563d7c;
+	background:  $primary-color;
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 150px;
