@@ -68,8 +68,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Demo
 
-To check out the Live Demo
+To check out the Live Demo [http://cryptobitbucket.com](http://cryptobitbucket.com)
 
-```
-[http://cryptobitbucket.com](http://cryptobitbucket.com)
-```
