@@ -1,4 +1,4 @@
-# OurPretendCompanyProject
+# Our Pretend Company Project
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -71,5 +71,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 To check out the Live Demo
 
 ```
-http://www.cryptobitbucket.com[http://www.cryptobitbucket.com]
+[http://www.cryptobitbucket.com](http://www.cryptobitbucket.com)
 ```
